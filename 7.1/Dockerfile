@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
-        libpng12-dev \
+        libpng-dev \
         libicu-dev \
         libcurl4-gnutls-dev \
     && docker-php-ext-install -j$(nproc) iconv mcrypt intl pdo pdo_mysql curl zip \
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get purge -y libfreetype6-dev \
         libjpeg62-turbo-dev \
         libmcrypt-dev \
-        libpng12-dev \
+        libpng-dev \
         libicu-dev \
         libcurl4-gnutls-dev \
     && apt-get clean \
